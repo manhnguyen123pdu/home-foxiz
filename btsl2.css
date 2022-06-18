@@ -1,0 +1,174 @@
+
+.slideto{
+    width: 100%;
+    height: 100%;
+position: relative;
+box-sizing: border-box;
+padding: 0 3%;
+max-height: 600px;
+}
+.slideto .slide{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.cam{
+    color: #e1a470;
+}
+.slideto .slide .sl{
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    opacity: 0;
+    visibility: hidden;
+    background-position: center;
+}
+.slideto .nut{
+    display: flex;
+    justify-content: center;
+    z-index: 1000;
+    position: absolute;
+    bottom: 0;
+    margin-left: 47%;
+    transform: translateX(-50%);
+}
+.slideto .nut .n{
+    width: 25px;
+    height: 25px;
+    border: 1px solid gray;
+    border-radius: 50%;
+    margin: 5px;
+}
+.sl1{
+    background-image:  linear-gradient(0,rgba(0, 0, 0, 0.897),rgba(165, 157, 157, 0)),url(https://foxiz.themeruby.com/fashion/wp-content/uploads/sites/4/2021/09/f3.jpg);
+}
+.sl2{
+    background-image: linear-gradient(0,rgba(0, 0, 0, 0.897),rgba(56, 54, 54, 0.295)), url(https://foxiz.themeruby.com/fashion/wp-content/uploads/sites/4/2021/12/f201.jpg);
+}
+.sl3{
+    background-image: linear-gradient(0,rgba(0, 0, 0, 0.897),rgba(83, 83, 83, 0.219)), url(https://foxiz.themeruby.com/fashion/wp-content/uploads/sites/4/2021/08/f43.jpg);
+}
+.anh{
+    position: relative;
+    z-index: 1;
+}
+.anh img:nth-child(1){
+    position: absolute;
+    top: -100px;
+}
+.anh img:nth-child(2){
+    position: absolute;
+    left: 0px;
+    top: -300px;
+
+}
+.anh img:nth-child(3){
+    position: absolute;
+    right:-100px;
+    top:-100px;
+
+}
+.ct {
+    z-index: 100;
+    width: 70%;
+    margin: auto;
+    text-align: center;
+    color: white;
+    margin-top: 8%;
+}
+
+@media only screen and (max-width: 992px) {
+    .ct {
+        margin-top: 17%;
+    }
+}
+.ct img{
+    padding: 30px 0;
+    padding: 30px 0;
+    margin-left: -30px;
+}
+.ct h1{
+   padding: 5px ;
+  
+}
+.ct .gach{
+    width: 90px;
+    height: 3px;
+    background-color: #e1a470;
+    margin: 18px auto;
+ 
+}
+.ct .btn{
+    width: 150px;
+    height: 40px;
+    border: 1px solid white;
+    border-radius: 5px;
+    color: white;
+}
+.ct .btn:hover{
+background-color: #e1a470;
+    color: white;
+    border: 1px solid #e1a470;
+}
+.active{
+    opacity: 1!important;
+    visibility: visible!important;
+}
+.xam{
+    background-color: gray;
+}
+
+
+/* xu li hieu ung */
+.active .anh img:nth-child(1),
+.active .anh img:nth-child(2) {
+    animation: nauvao 1s forwards;
+    opacity: 0;
+}
+.active .anh img:nth-child(3) {
+    animation: nauvao2 1s forwards;
+    opacity: 0;
+}
+@-webkit-keyframes nauvao{
+    from{transform: translatex(-100%) translateY(100%);  }
+    to{transform: translatex(0) translateY(0); opacity: 1;}
+    
+}
+@-webkit-keyframes nauvao2{
+    from{transform: translatex(100%) translateY(-100%);  }
+    to{transform: translatex(0) translateY(0); opacity: 1;}
+    
+}
+.active .anh img:nth-child(1){
+    animation-delay: 0.2s;
+}
+.active .ct h1,.active .ct img,.active .ct .gach,.active .ct p,.active .ct .btn {
+    animation: nauvao 1s forwards;
+    opacity: 0;
+}
+@-webkit-keyframes nauvao{
+    from{transform: translatex(-100%)  }
+    to{transform: translatex(0) translateY(0); opacity: 1;}
+    
+}
+.active .ct img{
+    animation-delay: 0.2s;
+}
+.active .ct h1{
+    animation-delay: 0.4s;
+}
+.active .ct h1{
+    animation-delay: 0.8s;
+}
+.active .ct .gach{
+    animation-delay: 1s;
+}
+.active .ct p{
+    animation-delay: 1.3s;
+}
+.active .ct .btn{
+    animation-delay: 1.6s;
+}
