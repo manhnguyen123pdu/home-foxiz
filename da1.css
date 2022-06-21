@@ -619,6 +619,10 @@ width: 100%;
         display: flex;
         margin-top: 10px;
     }
+    ._2{
+        max-width: 450px;
+        margin: auto;
+    }
     .ct1 .item ._2 a{
         font-size: 14px;
     }
